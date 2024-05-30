@@ -125,6 +125,8 @@ public class WelcomeController {
 
     @FXML
     private Button loginButton;
+@FXML
+        ImageView WelcomView ;
 
     public void setLoginStage(Stage loginStage) {
         this.loginStage = loginStage;
@@ -133,20 +135,19 @@ public class WelcomeController {
     @FXML
     private void initialize() {
         // Set up action for the login button
-//        ImageView imageView = new ImageView();
-//        try {
-//            // Load the image
-//            //  Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\main\\java\\com\\example\\plantorum\\Cherry2.jpg"));
-//            // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Parsle.jpg");
-//            Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Animegach.png"));
-//
-//            imageView.setImage(image);
+        try {
+            // Load the image
+            //  Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\main\\java\\com\\example\\plantorum\\Cherry2.jpg"));
+            // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Parsle.jpg");
+            Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum_App_JavaProject\\Plantorum\\src\\image\\WelcomView.jpg"));
+
+            WelcomView.setImage(image);
 //            imageView.setFitWidth(70); // Set the width of the image
 //            imageView.setPreserveRatio(true); // Preserve the aspect ratio of the image
 //            imageView.setFitHeight(100);
-//        } catch (FileNotFoundException e) {
-//            System.out.println("Unable to locate image file: " + ".jpg");
-//        }
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to locate image file: " + ".jpg");
+        }
         loginButton.setOnAction(event -> {
             openLoginPage(); // Method to open the login page
         });
@@ -157,6 +158,7 @@ public class WelcomeController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
             Parent root = loader.load();
+
 
             loginController controller = loader.getController();
             controller.setWelcomeStage(loginStage);

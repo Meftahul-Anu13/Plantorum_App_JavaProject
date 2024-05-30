@@ -213,39 +213,11 @@ public class PlantsDetailsController   {
 
     private MongoDatabase database;
     private MongoCollection<Document> plantCollection;
+    private Stage detailsStage;
 
     @FXML
 
-//    public  void initialize(Document query) {
-//        MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
-//        database = mongoClient.getDatabase("anodb");
-//        plantCollection = database.getCollection("Plants");
-//        Document plantsdoc=plantCollection.find(query).first();
-//
-//
-//
-////        for (Document doc : plantDocuments) {
-//        String name = plantsdoc.getString("name");
-//        String scientificName = plantsdoc.getString("scientific_name");
-//        String type = plantsdoc.getString("type");
-//        //String imageUrl = plantsdoc.getString("imageUrl");
-//
-//
-//        // Set plant details
-//       // imageView.setImage(new Image(plant.getImageUrl()));
-//        nameButton.setText("name: "+name);
-//        scientificNameButton.setText("Scientific Name: " +scientificName);
-//        typeButton.setText("Type: "+type );
-//        familyButton.setText("Family: " + plantsdoc.getString("family"));
-//       originButton.setText("Origin: " +plantsdoc.getString("origin"));
-//        descriptionButton.setText("Description: " +plantsdoc.getString("description"));
-//        bloomingSeasonButton.setText("Blooming Season: " + plantsdoc.getString("Blooming Season"));
-//        lightButton.setText("Light: " + plantsdoc.getString("light"));
-//        wateringButton.setText("Watering: " + plantsdoc.getString("watering"));
-//        soilButton.setText("Soil: " + plantsdoc.getString("soil"));
-//        temperatureButton.setText("Temperature: " + plantsdoc.getString("temperature"));
-//        humidityButton.setText("Humidity: " + plantsdoc.getString("humidity"));
-//    }
+
     public void initialize(Document query) {
         MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
         database = mongoClient.getDatabase("anodb");
@@ -289,6 +261,10 @@ public class PlantsDetailsController   {
         } catch (Exception e) {
             System.out.println("Failed to load image: " + e.getMessage());
         }
+
+    }
+    public void setWelcomeStage(Stage stage) {
+        this.detailsStage = stage;
     }
 
 

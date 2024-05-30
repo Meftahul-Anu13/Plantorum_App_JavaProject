@@ -8,13 +8,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.bson.Document;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Consumer;
 
@@ -40,17 +46,39 @@ public class loginController {
 
     private Stage welcomeStage;
     private Consumer<Void> onLoginSuccessCallback;
+    @FXML
+    ImageView loginView;
 
     public void LoginController() {
         initMongoDB();
+
+
     }
 
-    @FXML
+
     public void initialize() {
+        try {
+//            // Load the image
+                //Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Animegach.png"));
+            //  Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\main\\java\\com\\example\\plantorum\\Cherry2.jpg"));
+            // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Parsle.jpg");
+            Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum_App_JavaProject\\Plantorum\\src\\image\\PlantorumLogin.jpg"));
+
+            loginView.setImage(image);
+//            loginView.setFitWidth(70); // Set the width of the image
+//            loginView.setPreserveRatio(true); // Preserve the aspect ratio of the image
+//            loginView.setFitHeight(100);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to locate image file: " + ".jpg");
+        }
+//
+        //loginView.setImage(image);
         button_login.setOnAction(this::handleLogin);
         button_register.setOnAction(this::handleRegister);
         initMongoDB();
+        // Set the loaded image to the ImageView
     }
+
 
     private void initMongoDB() {
         try {
@@ -125,12 +153,25 @@ public class loginController {
 
     private void switchScene(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Explore.fxml"));
-            Parent exploreView = fxmlLoader.load();
-            ListViewDemoController listcontroller= fxmlLoader.getController();
-            Stage stage = new Stage();
-            stage.setTitle("list Details");
-            stage.setScene(new Scene(fxmlLoader.getRoot()));
+//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Explore.fxml"));
+//            Parent exploreView = fxmlLoader.load();
+//            ListViewDemoController listcontroller= fxmlLoader.getController();
+//            Stage stage = new Stage();
+//            stage.setTitle("list Details");
+//            stage.setScene(new Scene(fxmlLoader.getRoot()));
+//            stage.show();
+
+            Parent root = FXMLLoader.load(getClass().getResource("Explore.fxml"));
+           // ListViewDemoController listcontroller= root.getController();
+
+            // Create a new scene
+            Scene scene = new Scene(root);
+
+            // Get the stage information
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            // Set the scene and show the stage
+            stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

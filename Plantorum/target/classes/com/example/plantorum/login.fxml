@@ -4,46 +4,52 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.loginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.loginController">
    <children>
       <AnchorPane prefHeight="422.0" prefWidth="0.0" />
-      <AnchorPane prefHeight="400.0" prefWidth="617.0" style="-fx-background-color: #64E8DE; -fx-background-color: #8A64EB;">
+      <AnchorPane prefHeight="507.0" prefWidth="760.0">
          <children>
-
-
-            <Text fill="WHITE" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+            <ImageView fx:id="loginView" accessibleRole="BUTTON" fitHeight="739.0" fitWidth="956.0" layoutX="-53.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../image/PlantorumLogin.jpg" />
+               </image>
+            </ImageView>
+      
+      
+            <Text fill="WHITE" layoutX="499.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="130.0000001192093">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="488.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
                <font>
                   <Font size="23.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="19.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+            <TextField fx:id="tf_username" layoutX="65.0" layoutY="168.0" prefHeight="44.0" prefWidth="294.0" style="-fx-background-color: tranparent; -fx-text-fill: white;">
                <font>
-                  <Font size="23.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
-            </Text>
-            <TextField fx:id="tf_username" layoutX="151.0" layoutY="62.0" prefHeight="31.0" prefWidth="265.0" />
-            <PasswordField fx:id="tf_password" layoutX="151.0" layoutY="122.0" prefHeight="31.0" prefWidth="265.0" />
-            <Button fx:id="button_login" layoutX="201.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="48.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="login" textFill="WHITE">
+            </TextField>
+            <PasswordField fx:id="tf_password" layoutX="61.0" layoutY="330.0" prefHeight="37.0" prefWidth="303.0" style="-fx-background-color: tranparent; -fx-text-fill: white;" />
+            <Button fx:id="button_login" layoutX="52.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="48.0" prefWidth="321.0" style="-fx-background-color: transparent;" text="login">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="Microsoft Himalaya" size="39.0" />
                </font>
             </Button>
-            <Label layoutX="109.0" layoutY="334.0" prefHeight="44.0" prefWidth="101.0" text="Not a user?" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Button fx:id="button_register" layoutX="253.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="register" textFill="WHITE">
+            <Button fx:id="button_register" alignment="CENTER" layoutX="61.0" layoutY="482.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="303.0" text="register">
                <font>
                   <Font name="Segoe UI" size="22.0" />
                </font>
             </Button>
-            <Label layoutX="227.0" layoutY="14.0" text="PLANTORUM" textFill="WHITE">
+            <Label layoutX="153.0" layoutY="23.0" text="PLANTORUM" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

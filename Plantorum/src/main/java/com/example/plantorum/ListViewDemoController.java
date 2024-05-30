@@ -30,6 +30,8 @@ public class ListViewDemoController implements Initializable {
     @FXML
     private TextField searchBar;
     @FXML
+    private Stage detailsStage;
+    @FXML
     private Button seeAll;
     private MongoDatabase database;
     private MongoCollection<Document> plantCollection;
@@ -77,7 +79,7 @@ public class ListViewDemoController implements Initializable {
                             ImageView imageView = new ImageView();
                             try {
                                 // Load the image
-                              //  Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\main\\java\\com\\example\\plantorum\\Cherry2.jpg"));
+                               // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Pokedex\\src\\main\\java\\com\\example\\pokedex\\Image\\bulbasaur.png"));
                              // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Parsle.jpg");
                                 Image image = new Image(new FileInputStream(img_url));
 
@@ -164,15 +166,16 @@ public class ListViewDemoController implements Initializable {
             Document query = new Document("name", itemName);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("PlantsDetails.fxml"));
             // Load the FXML file and create a new stage for the plant details
-            fxmlLoader.load();
+           Parent root= fxmlLoader.load();
             PlantsDetailsController controller = fxmlLoader.getController();
+            controller.setWelcomeStage(detailsStage);
             controller.initialize(query);// Initialize the controller with the query
 
             // Show the new stage
-            Stage stage = new Stage();
-            stage.setTitle("Plant Details");
-            stage.setScene(new Scene(fxmlLoader.getRoot()));
-            stage.show();
+            Scene scene = new Scene(root);
+            detailsStage.setScene(scene);
+            detailsStage.setTitle("Plant Details");
+            detailsStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
