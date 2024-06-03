@@ -22,4 +22,4 @@ Plantorum is a comprehensive plant management application designed to help users
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/Plantorum.git
+   [git clone https://github.com/your-username/Plantorum.git](https://github.com/Meftahul-Anu13/Plantorum_App_JavaProject.git)
