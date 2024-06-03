@@ -14,7 +14,7 @@ Plantorum is a comprehensive plant management application designed to help users
 - **Plant Details**: View detailed information about each plant, including care instructions and common issues.
 - **User-specific Data**: Each user can manage their own plants and reminders independently.
 
-## Screenshots
+## Plantorum App
 
 ![image](https://github.com/Meftahul-Anu13/Plantorum_App_JavaProject/assets/140718008/ca564057-b292-4a7e-848e-b183b2a0bd92)
 
