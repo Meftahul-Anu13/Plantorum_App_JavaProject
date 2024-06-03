@@ -1,4 +1,4 @@
-![image](https://github.com/Meftahul-Anu13/Plantorum_App_JavaProject/assets/140718008/39a1ac78-8758-4d8f-bb40-c5deb177520d)#Plantorum-App
+
 #Plantorum is a Plant identifier and Plant Care App using Javafx and Scenebuilder
 
 # Plantorum
