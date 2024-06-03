@@ -1,4 +1,4 @@
-#Plantorum-App
+![image](https://github.com/Meftahul-Anu13/Plantorum_App_JavaProject/assets/140718008/39a1ac78-8758-4d8f-bb40-c5deb177520d)#Plantorum-App
 #Plantorum is a Plant identifier and Plant Care App using Javafx and Scenebuilder
 
 # Plantorum
@@ -16,7 +16,7 @@ Plantorum is a comprehensive plant management application designed to help users
 
 ## Screenshots
 
-(Add screenshots of your application here)
+![image](https://github.com/Meftahul-Anu13/Plantorum_App_JavaProject/assets/140718008/ca564057-b292-4a7e-848e-b183b2a0bd92)
 
 ## Installation
 
