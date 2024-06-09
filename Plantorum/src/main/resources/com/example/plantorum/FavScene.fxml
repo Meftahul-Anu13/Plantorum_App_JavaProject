@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backbtn" prefHeight="751.0" prefWidth="1256.0" stylesheets="@sylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.FavoriteController">
+    <styleClass>
+        <String fx:value="glass" />
+        <String fx:value="bezel" />
+    </styleClass>
+    <children>
+        <ScrollPane layoutX="69.0" layoutY="103.0" prefHeight="659.0" prefWidth="1120.0" style="-fx-background-color: orange;">
+            <content>
+                <GridPane fx:id="postGrid">
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                </GridPane>
+            </content>
+            <styleClass>
+                <String fx:value="glass" />
+                <String fx:value="screen3" />
+            </styleClass>
+        </ScrollPane>
+        <Button fx:id="rootpane" layoutX="1091.0" layoutY="25.0" mnemonicParsing="false" onAction="#backClick" prefHeight="50.0" prefWidth="98.0" styleClass="purplelabel" text="&lt;&lt;">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="favLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="25.0" prefHeight="52.0" prefWidth="338.0" styleClass="button-forward" text="Favorites" textAlignment="CENTER" textFill="WHITE" underline="true" wrapText="true" AnchorPane.bottomAnchor="688.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="458.0" AnchorPane.topAnchor="24.0">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="36.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

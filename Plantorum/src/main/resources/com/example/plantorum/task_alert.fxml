@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?import javafx.scene.control.CheckBox?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.plantorum.TaskAlertController"
+      spacing="20" alignment="center"
+      styleClass="alert-box">
+<VBox spacing="10" styleClass="task-box">
+    <Label text="Task:" styleClass="section-title"/>
+    <Label fx:id="taskLabel" text="Task Details" styleClass="task-label"/>
+</VBox>
+<VBox spacing="10" styleClass="date-box">
+    <Label text="Date:" styleClass="section-title"/>
+    <Label fx:id="dateLabel" text="Date"/>
+</VBox>
+<VBox spacing="10" styleClass="time-box">
+    <Label text="Time:" styleClass="section-title"/>
+    <Label fx:id="timeLabel" text="Time" styleClass="time-label"/>
+</VBox>
+<VBox fx:id="checkboxContainer" spacing="5"/>
+</VBox>
+

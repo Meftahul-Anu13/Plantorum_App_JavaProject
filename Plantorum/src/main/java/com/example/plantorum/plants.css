@@ -1,0 +1,11 @@
+screen3 {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.37), rgba(253, 253, 253, 0.78));
+    -fx-background-radius: 15 15 15 15;
+    -fx-font-family: "Segoe UI Bold";
+    -fx-font-size: 19;
+    -fx-border-color: rgba(255, 255, 255, 0.85);
+    -fx-border-radius: 15 15 15 15;
+}
+.grass-background {
+    -fx-background-color: linear-gradient(to bottom, #0CCDA3, #93d2a5);
+}

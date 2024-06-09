@@ -62,22 +62,25 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.TilePane;
+import javafx.scene.text.Text;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader welcomeLoader = new FXMLLoader(getClass().getResource("register.fxml"));
+//        FXMLLoader welcomeLoader = new FXMLLoader(getClass().getResource("Plant_Details.fxml"));
+        FXMLLoader welcomeLoader = new FXMLLoader(getClass().getResource("MyProfile.fxml"));
         Parent welcomeRoot = welcomeLoader.load();
-
-        // Set up the controller for the welcome page
-        WelcomeController welcomeController = welcomeLoader.getController();
-        welcomeController.setLoginStage(primaryStage);
-
-        // Set the scene for the welcome page
         Scene welcomeScene = new Scene(welcomeRoot);
+        welcomeScene.getStylesheets().add(getClass().getResource("Profile.css").toExternalForm());
         primaryStage.setScene(welcomeScene);
         primaryStage.setTitle("Welcome Page");
         primaryStage.show();
@@ -86,5 +89,4 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="767.0" prefWidth="1037.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.CatagoryControl">
+   <children>
+      <ImageView fx:id="catbg" fitHeight="288.0" fitWidth="1039.0" layoutX="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/catgoryuporerimg'.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="-2.0" layoutY="219.0" prefHeight="550.0" prefWidth="1039.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="742.0" prefWidth="1024.0" stylesheets="@sylesheet.css">
+               <children>
+                  <Label layoutX="-27.0" layoutY="-2.0" prefHeight="115.0" prefWidth="1103.0" styleClass="button-forward" />
+                  <Label fx:id="catagorylabel" layoutX="383.0" layoutY="23.0" prefHeight="54.0" prefWidth="294.0" styleClass="button-forward" stylesheets="@sylesheet.css" wrapText="true" />
+                  <GridPane fx:id="postgrid" layoutX="31.0" layoutY="126.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <Button fx:id="backbtn" layoutX="932.0" layoutY="24.0" mnemonicParsing="false" onAction="#backClick" prefHeight="46.0" prefWidth="66.0" styleClass="button-forward" text="&lt;&lt;" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

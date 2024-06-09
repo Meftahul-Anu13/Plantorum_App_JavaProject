@@ -1,0 +1,88 @@
+.calendar-container {
+    -fx-background-color: #d4edda; /* Light green background */
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
+
+.calendar-grid {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-color: #b2ebf2;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-pref-width: 600px; /* Fixed width */
+    -fx-pref-height: 400px; /* Fixed height */
+}
+
+.custom-combo-box {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #00796b;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5px;
+}
+
+.custom-combo-box .arrow {
+    -fx-background-color: #00796b;
+}
+
+.custom-combo-box .list-cell {
+    -fx-background-color: #ffffff; /* Light green background for dropdown items */
+    -fx-text-fill: #00796b; /* Text color for dropdown items */
+}
+
+.custom-combo-box .list-cell:hover {
+    -fx-background-color: #d4edda; /* Hover background color for dropdown items */
+}
+
+.custom-combo-box .list-cell:filled:selected, .custom-combo-box .list-cell:empty:selected {
+    -fx-background-color: #a5d6a7; /* Selected background color for dropdown items */
+}
+
+.date-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-color: #bbdefb; /* Light blue background */
+    -fx-padding: 10px 15px; /* Increase padding for larger background */
+    -fx-background-radius: 5px;
+    -fx-alignment: center;
+    -fx-pref-width: 50px; /* Set preferred width */
+}
+
+.alert-box {
+    -fx-padding: 20;
+    -fx-background-color: #e0f7fa;
+    -fx-border-color: #b2ebf2;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.task-box, .date-box, .time-box {
+    -fx-padding: 10;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b2ebf2;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00796b;
+}
+
+.task-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.date-label, .time-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.loginController">
    <children>
@@ -21,18 +20,6 @@
                   <Image url="@../../../../../image/PlantorumLogin.jpg" />
                </image>
             </ImageView>
-      
-      
-            <Text fill="WHITE" layoutX="499.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="130.0000001192093">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="488.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Text>
             <TextField fx:id="tf_username" layoutX="65.0" layoutY="168.0" prefHeight="44.0" prefWidth="294.0" style="-fx-background-color: tranparent; -fx-text-fill: white;">
                <font>
                   <Font name="System Bold" size="15.0" />
@@ -44,7 +31,7 @@
                   <Font name="Microsoft Himalaya" size="39.0" />
                </font>
             </Button>
-            <Button fx:id="button_register" alignment="CENTER" layoutX="61.0" layoutY="482.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="303.0" text="register">
+            <Button fx:id="button_register" alignment="CENTER" layoutX="61.0" layoutY="482.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="303.0" styleClass="button-forward" stylesheets="@sylesheet.css" text="register">
                <font>
                   <Font name="Segoe UI" size="22.0" />
                </font>

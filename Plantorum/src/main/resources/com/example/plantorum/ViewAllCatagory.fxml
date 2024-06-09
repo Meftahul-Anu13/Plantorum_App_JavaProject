@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="ajaira" prefHeight="779.0" prefWidth="1280.0" style="-fx-background-color: black;" styleClass="blackGradient" stylesheets="@sylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plantorum.ViewAllCatagory">
+   <children>
+      <VBox layoutY="-10.0" prefHeight="757.0" prefWidth="437.0">
+         <children>
+            <ImageView fx:id="sideimg" fitHeight="789.0" fitWidth="444.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../image/catagoryside.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <ImageView fx:id="rightimg" fitHeight="781.0" fitWidth="840.0" layoutX="435.0" onDragDetected="#backClick" opacity="0.52" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../../../../image/catagorybgmain.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="flowers1211" layoutX="471.0" layoutY="428.0" mnemonicParsing="false" prefHeight="213.0" prefWidth="152.0" styleClass="catagory" />
+      <Button fx:id="cactus" layoutX="1085.0" layoutY="428.0" mnemonicParsing="false" prefHeight="213.0" prefWidth="152.0" styleClass="catagory" />
+      <Button fx:id="Herbs" layoutX="959.0" layoutY="406.0" mnemonicParsing="false" prefHeight="257.0" prefWidth="152.0" styleClass="catagory" />
+      <Button fx:id="shrubs" layoutX="605.0" layoutY="406.0" mnemonicParsing="false" prefHeight="257.0" prefWidth="152.0" styleClass="catagory" />
+      <Button fx:id="flowers" layoutX="740.0" layoutY="385.0" mnemonicParsing="false" prefHeight="299.0" prefWidth="238.0" styleClass="catagory" />
+      <Label layoutX="460.0" layoutY="42.0" prefHeight="64.0" prefWidth="790.0" styleClass="glass" />
+      <ImageView fx:id="plantorambg" fitHeight="101.0" fitWidth="414.0" layoutX="640.0" layoutY="173.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/plantorumwritthnbg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="631.0" layoutY="174.0" prefHeight="89.0" prefWidth="437.0" style="-fx-border-radius: 30 30 30 30; -fx-border-color: white;" />
+      <ImageView fx:id="hurbsimg" fitHeight="176.0" fitWidth="152.0" layoutX="959.0" layoutY="406.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/hurbs.png" />
+         </image></ImageView>
+      <ImageView fx:id="cactusimg" fitHeight="165.0" fitWidth="152.0" layoutX="1098.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../image/cactus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="shrubsimg" fitHeight="176.0" fitWidth="165.0" layoutX="613.0" layoutY="435.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/shrubs.png" />
+         </image></ImageView>
+      <ImageView fx:id="acquaticimg" fitHeight="161.0" fitWidth="136.0" layoutX="471.0" layoutY="435.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/acquatic.png" />
+         </image></ImageView>
+      <ImageView fx:id="flowersimg" fitHeight="205.0" fitWidth="238.0" layoutX="740.0" layoutY="411.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../image/flowers.png" />
+         </image></ImageView>
+      <Button fx:id="acquaticbtn" layoutX="498.0" layoutY="590.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="83.0" style="-fx-background-color: white; -fx-font-family: Arial Rounded MT Bold; -fx-font-size: 15; -fx-border-color: black;" styleClass="button-back" stylesheets="@sylesheet.css" text="Acquatic" />
+      <Button fx:id="shrubsbtn" layoutX="631.0" layoutY="607.0" mnemonicParsing="false" onAction="#initialize" prefHeight="42.0" prefWidth="83.0" style="-fx-background-color: white; -fx-font-family: Arial Rounded MT Bold; -fx-font-size: 15; -fx-border-color: black;" styleClass="button-back" stylesheets="@sylesheet.css" text="Shrubs" />
+      <Button fx:id="flowersbtn" layoutX="804.0" layoutY="620.0" mnemonicParsing="false" onAction="#initialize" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: white; -fx-font-family: Arial Rounded MT Bold; -fx-font-size: 15; -fx-border-color: black;" styleClass="button-back" stylesheets="@sylesheet.css" text="Flowers" />
+      <Button fx:id="hurbsbtn" layoutX="994.0" layoutY="607.0" mnemonicParsing="false" onAction="#initialize" prefHeight="42.0" prefWidth="83.0" style="-fx-background-color: white; -fx-font-family: Arial Rounded MT Bold; -fx-font-size: 15; -fx-border-color: black;" styleClass="button-back" stylesheets="@sylesheet.css" text="Herbs" />
+      <Button fx:id="cactusbtn" layoutX="1120.0" layoutY="586.0" mnemonicParsing="false" onAction="#initialize" prefHeight="42.0" prefWidth="83.0" style="-fx-background-color: white; -fx-font-family: Arial Rounded MT Bold; -fx-font-size: 15; -fx-border-color: black;" styleClass="button-back" stylesheets="@sylesheet.css" text="Cactus" />
+      <Button layoutX="473.0" layoutY="53.0" mnemonicParsing="false" onAction="#backClick" prefHeight="42.0" prefWidth="108.0" text="Menu">
+         <styleClass>
+            <String fx:value="button-back" />
+            <String fx:value="button-forward" />
+         </styleClass>
+      </Button>
+      <Button fx:id="sympt" layoutX="607.0" layoutY="53.0" mnemonicParsing="false" onAction="#symptomps" prefHeight="42.0" prefWidth="152.0" text="Symptomps">
+         <styleClass>
+            <String fx:value="button-back" />
+            <String fx:value="button-forward" />
+         </styleClass>
+      </Button>
+      <Button fx:id="favbtn" layoutX="791.0" layoutY="53.0" mnemonicParsing="false" onAction="#ShowFavorites" prefHeight="42.0" prefWidth="136.0" text="Favorites">
+         <styleClass>
+            <String fx:value="button-back" />
+            <String fx:value="button-forward" />
+         </styleClass>
+      </Button>
+      <Button fx:id="remainderbtn" layoutX="959.0" layoutY="53.0" mnemonicParsing="false" onAction="#remainder" prefHeight="42.0" prefWidth="123.0" text="Remainder">
+         <styleClass>
+            <String fx:value="button-back" />
+            <String fx:value="button-forward" />
+         </styleClass>
+      </Button>
+      <Button fx:id="filterbtn" layoutX="1120.0" layoutY="53.0" mnemonicParsing="false" onAction="#Search" prefHeight="42.0" prefWidth="108.0" text="Filter">
+         <styleClass>
+            <String fx:value="button-back" />
+            <String fx:value="button-forward" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

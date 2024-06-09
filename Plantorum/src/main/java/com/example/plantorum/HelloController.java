@@ -3,8 +3,13 @@ package com.example.plantorum;
 import com.mongodb.client.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import org.bson.Document;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Type;
 
 public class HelloController {
@@ -12,6 +17,10 @@ public class HelloController {
     private Label welcomeText;
     @FXML
     private Label Thanks;
+    @FXML
+            private ImageView bgimage;
+    @FXML
+    private ImageView plantorumimg;
     MongoClient client= MongoClients.create("mongodb://localhost:27017");
     //MongoDatabase db=client.getDatabase("PlantorumDB");
 //        MongoDatabase db=client.getDatabase("anodb");
@@ -26,28 +35,34 @@ public class HelloController {
     // Access the collection
     MongoCollection<Document> collection = database.getCollection("Plants");
 
-    // Find all documents in the collection
-    FindIterable<Document> documents = collection.find();
-    Document doc=collection.find().first();
-    String scientificName = doc.getString("scientific_name");
-    String type = doc.getString("type");
+    @FXML
+    public void initialize() {
+//        ImageView imageView = new ImageView();
+        try {
+            // Load the image
+            // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Pokedex\\src\\main\\java\\com\\example\\pokedex\\Image\\bulbasaur.png"));
+            // Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum\\src\\image\\Parsle.jpg");
+            Image image = new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum_App_JavaProject\\Plantorum\\src\\image\\PlantsDetailsBg.jpg"));
+Image img=new Image(new FileInputStream("D:\\4rth Sem Product\\JavaProject\\Plantorum_App_JavaProject\\Plantorum\\src\\image\\plantorumwritthnbg.png"));
+//            imageView.setImage(image);
+//            imageView.setFitWidth(70); // Set the width of the image
+//            imageView.setPreserveRatio(true); // Preserve the aspect ratio of the image
+//            imageView.setFitHeight(100);
+            bgimage.setImage(image);
+            plantorumimg.setImage(img);
 
-//        System.out.println("Scientific Name: " + scientificName);
-//        System.out.println("Type: " + type);
 
-    // Iterate over the documents and print them
-//        for (Document document : documents) {
-//        System.out.println(document.toJson());
-//
-//    }
+        } catch (FileNotFoundException e) {
+           // System.out.println("Unable to locate image file: " + item.toLowerCase() + ".jpg");
+        }
+    }
 
-    // Close the MongoDB client
-    // client.close();
+
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText(scientificName);
-        Thanks.setText(type);
+//        welcomeText.setText(scientificName);
+//        Thanks.setText(type);
 
     }
 }
